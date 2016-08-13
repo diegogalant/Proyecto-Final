@@ -33,5 +33,10 @@ namespace Banco_de_Sangre
         {
             personaBindingSource.DataSource = new Persona();
         }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Banco_de_Sangre
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PersonaForm());
+            Application.Run(new Banco_de_Sangre());
         }
     }
 }

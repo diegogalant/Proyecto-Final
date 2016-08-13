@@ -32,38 +32,35 @@
             System.Windows.Forms.Label apellidoLabel;
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label dniLabel;
-            System.Windows.Forms.Label esDonanteLabel;
-            System.Windows.Forms.Label factorRhLabel;
-            System.Windows.Forms.Label grupoSanguineoLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label telefonoLabel;
+            System.Windows.Forms.Label descripcionLabel;
+            System.Windows.Forms.Label factorRhLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonaForm));
-            this.apellidoTextBox = new System.Windows.Forms.TextBox();
-            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.dniTextBox = new System.Windows.Forms.TextBox();
-            this.esDonanteCheckBox = new System.Windows.Forms.CheckBox();
-            this.factorRhTextBox = new System.Windows.Forms.TextBox();
-            this.grupoSanguineoTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
+            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.dniTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.telefonoTextBox = new System.Windows.Forms.TextBox();
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.factorRhCheckBox = new System.Windows.Forms.CheckBox();
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             dniLabel = new System.Windows.Forms.Label();
-            esDonanteLabel = new System.Windows.Forms.Label();
-            factorRhLabel = new System.Windows.Forms.Label();
-            grupoSanguineoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
+            factorRhLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(32, 46);
+            apellidoLabel.Location = new System.Drawing.Point(96, 47);
             apellidoLabel.Name = "apellidoLabel";
             apellidoLabel.Size = new System.Drawing.Size(47, 13);
             apellidoLabel.TabIndex = 0;
@@ -72,177 +69,159 @@
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(32, 102);
+            direccionLabel.Location = new System.Drawing.Point(96, 73);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 2;
+            direccionLabel.TabIndex = 0;
             direccionLabel.Text = "Direccion:";
             // 
             // dniLabel
             // 
             dniLabel.AutoSize = true;
-            dniLabel.Location = new System.Drawing.Point(32, 72);
+            dniLabel.Location = new System.Drawing.Point(96, 99);
             dniLabel.Name = "dniLabel";
             dniLabel.Size = new System.Drawing.Size(26, 13);
-            dniLabel.TabIndex = 4;
+            dniLabel.TabIndex = 0;
             dniLabel.Text = "Dni:";
-            // 
-            // esDonanteLabel
-            // 
-            esDonanteLabel.AutoSize = true;
-            esDonanteLabel.Location = new System.Drawing.Point(32, 208);
-            esDonanteLabel.Name = "esDonanteLabel";
-            esDonanteLabel.Size = new System.Drawing.Size(66, 13);
-            esDonanteLabel.TabIndex = 6;
-            esDonanteLabel.Text = "Es Donante:";
-            // 
-            // factorRhLabel
-            // 
-            factorRhLabel.AutoSize = true;
-            factorRhLabel.Location = new System.Drawing.Point(32, 180);
-            factorRhLabel.Name = "factorRhLabel";
-            factorRhLabel.Size = new System.Drawing.Size(57, 13);
-            factorRhLabel.TabIndex = 8;
-            factorRhLabel.Text = "Factor Rh:";
-            // 
-            // grupoSanguineoLabel
-            // 
-            grupoSanguineoLabel.AutoSize = true;
-            grupoSanguineoLabel.Location = new System.Drawing.Point(32, 154);
-            grupoSanguineoLabel.Name = "grupoSanguineoLabel";
-            grupoSanguineoLabel.Size = new System.Drawing.Size(93, 13);
-            grupoSanguineoLabel.TabIndex = 10;
-            grupoSanguineoLabel.Text = "Grupo Sanguineo:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(32, 20);
+            nombreLabel.Location = new System.Drawing.Point(96, 125);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 12;
+            nombreLabel.TabIndex = 0;
             nombreLabel.Text = "Nombre:";
             // 
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(32, 128);
+            telefonoLabel.Location = new System.Drawing.Point(96, 151);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(52, 13);
-            telefonoLabel.TabIndex = 14;
+            telefonoLabel.TabIndex = 0;
             telefonoLabel.Text = "Telefono:";
             // 
-            // apellidoTextBox
+            // descripcionLabel
             // 
-            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(131, 43);
-            this.apellidoTextBox.Name = "apellidoTextBox";
-            this.apellidoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.apellidoTextBox.TabIndex = 1;
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(96, 211);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel.TabIndex = 0;
+            descripcionLabel.Text = "Descripcion:";
             // 
-            // personaBindingSource
+            // factorRhLabel
             // 
-            this.personaBindingSource.DataSource = typeof(Persona);
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(131, 99);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(104, 20);
-            this.direccionTextBox.TabIndex = 3;
-            // 
-            // dniTextBox
-            // 
-            this.dniTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Dni", true));
-            this.dniTextBox.Location = new System.Drawing.Point(131, 69);
-            this.dniTextBox.Name = "dniTextBox";
-            this.dniTextBox.Size = new System.Drawing.Size(104, 20);
-            this.dniTextBox.TabIndex = 5;
-            // 
-            // esDonanteCheckBox
-            // 
-            this.esDonanteCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.personaBindingSource, "EsDonante", true));
-            this.esDonanteCheckBox.Location = new System.Drawing.Point(131, 203);
-            this.esDonanteCheckBox.Name = "esDonanteCheckBox";
-            this.esDonanteCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.esDonanteCheckBox.TabIndex = 7;
-            this.esDonanteCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // factorRhTextBox
-            // 
-            this.factorRhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "FactorRh", true));
-            this.factorRhTextBox.Location = new System.Drawing.Point(131, 177);
-            this.factorRhTextBox.Name = "factorRhTextBox";
-            this.factorRhTextBox.Size = new System.Drawing.Size(104, 20);
-            this.factorRhTextBox.TabIndex = 9;
-            // 
-            // grupoSanguineoTextBox
-            // 
-            this.grupoSanguineoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "GrupoSanguineo", true));
-            this.grupoSanguineoTextBox.Location = new System.Drawing.Point(131, 151);
-            this.grupoSanguineoTextBox.Name = "grupoSanguineoTextBox";
-            this.grupoSanguineoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.grupoSanguineoTextBox.TabIndex = 11;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(131, 17);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(104, 20);
-            this.nombreTextBox.TabIndex = 13;
-            // 
-            // telefonoTextBox
-            // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(131, 125);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.telefonoTextBox.TabIndex = 15;
+            factorRhLabel.AutoSize = true;
+            factorRhLabel.Location = new System.Drawing.Point(96, 239);
+            factorRhLabel.Name = "factorRhLabel";
+            factorRhLabel.Size = new System.Drawing.Size(57, 13);
+            factorRhLabel.TabIndex = 0;
+            factorRhLabel.Text = "Factor Rh:";
             // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(193, 238);
+            this.aceptarButton.Location = new System.Drawing.Point(192, 289);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
-            this.aceptarButton.TabIndex = 16;
+            this.aceptarButton.TabIndex = 8;
             this.aceptarButton.Text = "Aceptar";
             this.aceptarButton.UseVisualStyleBackColor = true;
             this.aceptarButton.Click += new System.EventHandler(this.aceptarButton_Click);
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(274, 238);
+            this.cancelarButton.Location = new System.Drawing.Point(273, 289);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelarButton.TabIndex = 17;
+            this.cancelarButton.TabIndex = 9;
             this.cancelarButton.Text = "Cancelar";
             this.cancelarButton.UseVisualStyleBackColor = true;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
+            // 
+            // personaBindingSource
+            // 
+            this.personaBindingSource.DataSource = typeof(Persona);
+            // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(157, 44);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.apellidoTextBox.TabIndex = 1;
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(157, 70);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.direccionTextBox.TabIndex = 2;
+            // 
+            // dniTextBox
+            // 
+            this.dniTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Dni", true));
+            this.dniTextBox.Location = new System.Drawing.Point(157, 96);
+            this.dniTextBox.Name = "dniTextBox";
+            this.dniTextBox.Size = new System.Drawing.Size(100, 20);
+            this.dniTextBox.TabIndex = 3;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(157, 122);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 4;
+            // 
+            // telefonoTextBox
+            // 
+            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Telefono", true));
+            this.telefonoTextBox.Location = new System.Drawing.Point(157, 148);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefonoTextBox.TabIndex = 5;
+            // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "GrupoSanguineo.Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(168, 208);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(104, 20);
+            this.descripcionTextBox.TabIndex = 6;
+            // 
+            // factorRhCheckBox
+            // 
+            this.factorRhCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.personaBindingSource, "GrupoSanguineo.FactorRh", true));
+            this.factorRhCheckBox.Location = new System.Drawing.Point(168, 234);
+            this.factorRhCheckBox.Name = "factorRhCheckBox";
+            this.factorRhCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.factorRhCheckBox.TabIndex = 7;
+            this.factorRhCheckBox.UseVisualStyleBackColor = true;
             // 
             // PersonaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 268);
-            this.Controls.Add(this.cancelarButton);
-            this.Controls.Add(this.aceptarButton);
+            this.ClientSize = new System.Drawing.Size(407, 346);
+            this.Controls.Add(descripcionLabel);
+            this.Controls.Add(this.descripcionTextBox);
+            this.Controls.Add(factorRhLabel);
+            this.Controls.Add(this.factorRhCheckBox);
             this.Controls.Add(apellidoLabel);
             this.Controls.Add(this.apellidoTextBox);
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(dniLabel);
             this.Controls.Add(this.dniTextBox);
-            this.Controls.Add(esDonanteLabel);
-            this.Controls.Add(this.esDonanteCheckBox);
-            this.Controls.Add(factorRhLabel);
-            this.Controls.Add(this.factorRhTextBox);
-            this.Controls.Add(grupoSanguineoLabel);
-            this.Controls.Add(this.grupoSanguineoTextBox);
             this.Controls.Add(nombreLabel);
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(telefonoLabel);
             this.Controls.Add(this.telefonoTextBox);
+            this.Controls.Add(this.cancelarButton);
+            this.Controls.Add(this.aceptarButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonaForm";
             this.Text = "Registro de Donantes";
@@ -254,18 +233,16 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Button aceptarButton;
+        private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.BindingSource personaBindingSource;
         private System.Windows.Forms.TextBox apellidoTextBox;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.TextBox dniTextBox;
-        private System.Windows.Forms.CheckBox esDonanteCheckBox;
-        private System.Windows.Forms.TextBox factorRhTextBox;
-        private System.Windows.Forms.TextBox grupoSanguineoTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
-        private System.Windows.Forms.Button aceptarButton;
-        private System.Windows.Forms.Button cancelarButton;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.CheckBox factorRhCheckBox;
     }
 }
 

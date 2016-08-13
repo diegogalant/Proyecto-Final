@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 public class Persona
 {
+    public int PersonaId { get; set; }
 
     public string Nombre { get; set; }
 
@@ -19,10 +21,7 @@ public class Persona
 
     public int Telefono { get; set; }
 
-    public bool EsDonante { get; set; }
-
-    public string GrupoSanguineo { get; set; }
-
-    public string FactorRh { get; set; }
+    public GrupoSanguineo GrupoSanguineo { get; set; }
+    
 }
 

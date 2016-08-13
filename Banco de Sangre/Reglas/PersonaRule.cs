@@ -15,6 +15,14 @@ namespace Reglas
             // Obtengo la lista
             var personas = ObtenerPersonas();
 
+            foreach (var item in personas)
+            {
+                if (item.Dni == persona.Dni)
+                {
+                    throw new ApplicationException("No se puede agregar la pperrsona porque ya existe");
+                }
+            }
+
             // Le agrego el cliente
             personas.Add(persona);
 
@@ -24,12 +32,26 @@ namespace Reglas
 
         public void ModificarPersona(Persona persona)
         {
-
+            EliminarPersona(persona);
+            AgregarPersona(persona);
         }
 
         public void EliminarPersona(Persona persona)
         {
+           var personas = ObtenerPersonas();
+           Persona personaARemover = null;
 
+            foreach (var item in personas)
+            {
+                if (item.Dni == persona.Dni)
+                {
+                      personaARemover = item;
+                }
+            }
+
+            personas.Remove(personaARemover);
+
+            GrabarPersona(personas);
         }
 
         public List<Persona> ObtenerPersonas()
@@ -49,7 +71,7 @@ namespace Reglas
             return lista;
         }
 
-        private void GrabarPersona(List<Persona> personas)
+        public void GrabarPersona(List<Persona> personas)
         {
             var personasSerializados = JsonConvert.SerializeObject(personas);
 
