@@ -19,13 +19,13 @@ namespace Reglas
             {
                 if (item.Dni == persona.Dni)
                 {
-                    throw new ApplicationException("No se puede agregar la pperrsona porque ya existe");
+                    throw new ApplicationException("No se puede agregar la persona porque ya existe");
                 }
             }
 
             // Le agrego el cliente
             personas.Add(persona);
-
+            
             //Grabamos
             GrabarPersona(personas);
         }
@@ -49,7 +49,7 @@ namespace Reglas
                 }
             }
 
-            personas.Remove(personaARemover);
+            personas.Remove(persona);
 
             GrabarPersona(personas);
         }

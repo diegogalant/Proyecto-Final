@@ -27,15 +27,17 @@ namespace Banco_de_Sangre
 
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void Eliminar_Click(object sender, EventArgs e)
         {
+            // eliminar
             var r = new PersonaRule();
 
             r.EliminarPersona(_persona);
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void Agregar_Click(object sender, EventArgs e)
         {
+            //Agregar
             var pForm = new PersonaForm();
             pForm.ShowDialog();
         }
@@ -47,6 +49,12 @@ namespace Banco_de_Sangre
         }
 
         private void personaBindingSource_DataSourceChanged(object sender, EventArgs e)
+        {
+            //var r = new PersonaRule();
+            //personaBindingSource.DataSource = r.ObtenerPersonas();
+        }
+
+        private void Actualizar_Click(object sender, EventArgs e)
         {
             var r = new PersonaRule();
             personaBindingSource.DataSource = r.ObtenerPersonas();

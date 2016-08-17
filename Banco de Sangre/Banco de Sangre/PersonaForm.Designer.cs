@@ -60,7 +60,7 @@
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(96, 47);
+            apellidoLabel.Location = new System.Drawing.Point(96, 76);
             apellidoLabel.Name = "apellidoLabel";
             apellidoLabel.Size = new System.Drawing.Size(47, 13);
             apellidoLabel.TabIndex = 0;
@@ -69,7 +69,7 @@
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(96, 73);
+            direccionLabel.Location = new System.Drawing.Point(96, 128);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(55, 13);
             direccionLabel.TabIndex = 0;
@@ -78,7 +78,7 @@
             // dniLabel
             // 
             dniLabel.AutoSize = true;
-            dniLabel.Location = new System.Drawing.Point(96, 99);
+            dniLabel.Location = new System.Drawing.Point(96, 102);
             dniLabel.Name = "dniLabel";
             dniLabel.Size = new System.Drawing.Size(26, 13);
             dniLabel.TabIndex = 0;
@@ -87,7 +87,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(96, 125);
+            nombreLabel.Location = new System.Drawing.Point(96, 50);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 0;
@@ -96,7 +96,7 @@
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(96, 151);
+            telefonoLabel.Location = new System.Drawing.Point(96, 154);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(52, 13);
             telefonoLabel.TabIndex = 0;
@@ -105,7 +105,7 @@
             // descripcionLabel
             // 
             descripcionLabel.AutoSize = true;
-            descripcionLabel.Location = new System.Drawing.Point(96, 211);
+            descripcionLabel.Location = new System.Drawing.Point(85, 180);
             descripcionLabel.Name = "descripcionLabel";
             descripcionLabel.Size = new System.Drawing.Size(66, 13);
             descripcionLabel.TabIndex = 0;
@@ -114,7 +114,7 @@
             // factorRhLabel
             // 
             factorRhLabel.AutoSize = true;
-            factorRhLabel.Location = new System.Drawing.Point(96, 239);
+            factorRhLabel.Location = new System.Drawing.Point(85, 208);
             factorRhLabel.Name = "factorRhLabel";
             factorRhLabel.Size = new System.Drawing.Size(57, 13);
             factorRhLabel.TabIndex = 0;
@@ -122,7 +122,7 @@
             // 
             // aceptarButton
             // 
-            this.aceptarButton.Location = new System.Drawing.Point(192, 289);
+            this.aceptarButton.Location = new System.Drawing.Point(127, 251);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
             this.aceptarButton.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Location = new System.Drawing.Point(273, 289);
+            this.cancelarButton.Location = new System.Drawing.Point(208, 251);
             this.cancelarButton.Name = "cancelarButton";
             this.cancelarButton.Size = new System.Drawing.Size(75, 23);
             this.cancelarButton.TabIndex = 9;
@@ -147,7 +147,7 @@
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(157, 44);
+            this.apellidoTextBox.Location = new System.Drawing.Point(157, 73);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidoTextBox.TabIndex = 1;
@@ -155,7 +155,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(157, 70);
+            this.direccionTextBox.Location = new System.Drawing.Point(157, 125);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.direccionTextBox.TabIndex = 2;
@@ -163,7 +163,7 @@
             // dniTextBox
             // 
             this.dniTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Dni", true));
-            this.dniTextBox.Location = new System.Drawing.Point(157, 96);
+            this.dniTextBox.Location = new System.Drawing.Point(157, 99);
             this.dniTextBox.Name = "dniTextBox";
             this.dniTextBox.Size = new System.Drawing.Size(100, 20);
             this.dniTextBox.TabIndex = 3;
@@ -171,7 +171,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(157, 122);
+            this.nombreTextBox.Location = new System.Drawing.Point(157, 47);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 4;
@@ -179,7 +179,7 @@
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(157, 148);
+            this.telefonoTextBox.Location = new System.Drawing.Point(157, 151);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.telefonoTextBox.TabIndex = 5;
@@ -187,7 +187,7 @@
             // descripcionTextBox
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "GrupoSanguineo.Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(168, 208);
+            this.descripcionTextBox.Location = new System.Drawing.Point(157, 177);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(104, 20);
             this.descripcionTextBox.TabIndex = 6;
@@ -195,7 +195,7 @@
             // factorRhCheckBox
             // 
             this.factorRhCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.personaBindingSource, "GrupoSanguineo.FactorRh", true));
-            this.factorRhCheckBox.Location = new System.Drawing.Point(168, 234);
+            this.factorRhCheckBox.Location = new System.Drawing.Point(157, 203);
             this.factorRhCheckBox.Name = "factorRhCheckBox";
             this.factorRhCheckBox.Size = new System.Drawing.Size(104, 24);
             this.factorRhCheckBox.TabIndex = 7;
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 346);
+            this.ClientSize = new System.Drawing.Size(407, 300);
             this.Controls.Add(descripcionLabel);
             this.Controls.Add(this.descripcionTextBox);
             this.Controls.Add(factorRhLabel);

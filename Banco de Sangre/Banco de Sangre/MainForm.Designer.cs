@@ -41,9 +41,9 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.Agregar = new System.Windows.Forms.ToolStripButton();
+            this.Eliminar = new System.Windows.Forms.ToolStripButton();
+            this.Actualizar = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -137,43 +137,44 @@
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.Agregar,
+            this.Eliminar,
+            this.Actualizar});
             this.toolStrip2.Location = new System.Drawing.Point(3, 3);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(509, 25);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton1
+            // Agregar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.Agregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Agregar.Image = ((System.Drawing.Image)(resources.GetObject("Agregar.Image")));
+            this.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(23, 22);
+            this.Agregar.Text = "toolStripButton1";
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
-            // toolStripButton2
+            // Eliminar
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton1";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.Eliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(23, 22);
+            this.Eliminar.Text = "toolStripButton1";
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
-            // toolStripButton3
+            // Actualizar
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton2";
+            this.Actualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Actualizar.Image = ((System.Drawing.Image)(resources.GetObject("Actualizar.Image")));
+            this.Actualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.Size = new System.Drawing.Size(23, 22);
+            this.Actualizar.Text = "toolStripButton2";
+            this.Actualizar.Click += new System.EventHandler(this.Actualizar_Click);
             // 
             // tabPage2
             // 
@@ -212,9 +213,9 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton Agregar;
+        private System.Windows.Forms.ToolStripButton Eliminar;
+        private System.Windows.Forms.ToolStripButton Actualizar;
         private System.Windows.Forms.DataGridView personaDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
