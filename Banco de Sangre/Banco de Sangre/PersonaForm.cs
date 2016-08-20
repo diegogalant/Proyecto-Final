@@ -26,6 +26,8 @@ namespace Banco_de_Sangre
             var r = new PersonaRule();
             r.AgregarPersona(personaEnEdicion);
 
+           // var persistor= new EntityPersistor<Persona>
+
             Close();
         }
 

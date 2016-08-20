@@ -16,22 +16,21 @@ namespace Banco_de_Sangre
         private string _action;
         private Persona _persona;
 
+
         public Banco_de_Sangre()
         {
             InitializeComponent();
         }
 
-        private void personaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void personaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             _persona = (Persona)personaBindingSource.Current;
-
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
             // eliminar
             var r = new PersonaRule();
-
             r.EliminarPersona(_persona);
         }
 
@@ -44,17 +43,21 @@ namespace Banco_de_Sangre
 
         private void Banco_de_Sangre_Load(object sender, EventArgs e)
         {
-            var r = new PersonaRule();
-            personaBindingSource.DataSource = r.ObtenerPersonas();
+            Refrescar();
         }
 
         private void personaBindingSource_DataSourceChanged(object sender, EventArgs e)
         {
-            //var r = new PersonaRule();
-            //personaBindingSource.DataSource = r.ObtenerPersonas();
+            //Refrescar();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
+        {
+            Refrescar();
+        }
+
+
+        private void Refrescar()
         {
             var r = new PersonaRule();
             personaBindingSource.DataSource = r.ObtenerPersonas();

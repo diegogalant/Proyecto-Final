@@ -45,7 +45,8 @@ namespace Reglas
             {
                 if (item.Dni == persona.Dni)
                 {
-                      personaARemover = item;
+                    personaARemover = item;
+                    break;
                 }
             }
 

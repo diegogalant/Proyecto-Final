@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="BancoSangre.cs" />
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="GrupoSanguineo.cs" />
+    <Compile Include="IEntidad.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
