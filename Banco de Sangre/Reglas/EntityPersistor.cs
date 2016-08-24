@@ -27,8 +27,8 @@ namespace Reglas
 
         public void Grabar(IEnumerable<T> lista)
         {
-            var listaSerializa = JsonConvert.SerializeObject(lista);
-            System.IO.File.WriteAllText(_nombreArchivo, listaSerializa);
+            var listaSerializada = JsonConvert.SerializeObject(lista);
+            System.IO.File.WriteAllText(_nombreArchivo, listaSerializada);
         }
 
 

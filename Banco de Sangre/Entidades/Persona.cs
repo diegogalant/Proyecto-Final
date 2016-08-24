@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 
 
-public class Persona
+public class Persona : EntidadBase
 {
     //public int PersonaId { get; set; }
 

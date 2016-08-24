@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reglas
 {
-    public class PersonaMapper
+    public class PersonaMapper : BaseMapper<Persona>
     {
 
     }

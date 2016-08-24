@@ -23,8 +23,8 @@ namespace Banco_de_Sangre
         {
             var personaEnEdicion = (Persona)personaBindingSource.Current;
 
-            var r = new PersonaRule();
-            r.AgregarPersona(personaEnEdicion);
+            var r = new PersonaMapper();
+            r.Grabar(personaEnEdicion);
 
            // var persistor= new EntityPersistor<Persona>
 

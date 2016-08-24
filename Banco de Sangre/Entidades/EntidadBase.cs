@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class BaseEntity
+    public abstract class EntidadBase : IEntidad
     {
         public Guid Id { get; set; }
     }
+
+    //protected EntidadBase()
+    //{
+    //    Id = Guid.NewGuid();
+    //}
+         
 }

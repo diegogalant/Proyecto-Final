@@ -30,8 +30,13 @@ namespace Banco_de_Sangre
         private void Eliminar_Click(object sender, EventArgs e)
         {
             // eliminar
-            var r = new PersonaRule();
-            r.EliminarPersona(_persona);
+            //var r = new PersonaRule();
+            //r.EliminarPersona(_persona);
+
+            var pMapper = new PersonaMapper();
+            var todos = pMapper.ObtenerTodas();
+
+            
         }
 
         private void Agregar_Click(object sender, EventArgs e)
@@ -59,8 +64,8 @@ namespace Banco_de_Sangre
 
         private void Refrescar()
         {
-            var r = new PersonaRule();
-            personaBindingSource.DataSource = r.ObtenerPersonas();
+            var r = new PersonaMapper();
+            personaBindingSource.DataSource = r.ObtenerTodas();
         }
     }
 }

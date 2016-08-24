@@ -150,7 +150,7 @@
             this.apellidoTextBox.Location = new System.Drawing.Point(157, 73);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.apellidoTextBox.TabIndex = 1;
+            this.apellidoTextBox.TabIndex = 2;
             // 
             // direccionTextBox
             // 
@@ -158,7 +158,7 @@
             this.direccionTextBox.Location = new System.Drawing.Point(157, 125);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.direccionTextBox.TabIndex = 2;
+            this.direccionTextBox.TabIndex = 4;
             // 
             // dniTextBox
             // 
@@ -174,7 +174,7 @@
             this.nombreTextBox.Location = new System.Drawing.Point(157, 47);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nombreTextBox.TabIndex = 4;
+            this.nombreTextBox.TabIndex = 1;
             // 
             // telefonoTextBox
             // 
