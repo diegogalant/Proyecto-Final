@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 public class Persona : EntidadBase
 {
-    //public int PersonaId { get; set; }
 
     public string Nombre { get; set; }
 
@@ -21,7 +20,7 @@ public class Persona : EntidadBase
 
     public int Telefono { get; set; }
 
-    public GrupoSanguineo GrupoSanguineo { get; set; }
+    public Guid GrupoSanguineo { get; set; }
     
 }
 

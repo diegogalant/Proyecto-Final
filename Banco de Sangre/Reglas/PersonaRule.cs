@@ -17,68 +17,46 @@ namespace Reglas
 
             foreach (var item in personas)
             {
-                if (item.Dni == persona.Dni)
+                if (item.Id == persona.Id)
                 {
                     throw new ApplicationException("No se puede agregar la persona porque ya existe");
                 }
             }
 
             // Le agrego el cliente
-            personas.Add(persona);
-            
+           // personas;
+
             //Grabamos
-            GrabarPersona(personas);
+            var pMapper = new PersonaMapper();
+
+            //pMapper.Grabar(personas);
+
+
         }
 
         public void ModificarPersona(Persona persona)
         {
-            EliminarPersona(persona);
-            AgregarPersona(persona);
+
         }
 
         public void EliminarPersona(Persona persona)
         {
-           var personas = ObtenerPersonas();
-           Persona personaARemover = null;
-
-            foreach (var item in personas)
-            {
-                if (item.Dni == persona.Dni)
-                {
-                    personaARemover = item;
-                    break;
-                }
-            }
-
-            personas.Remove(persona);
-
-            GrabarPersona(personas);
         }
 
-        public List<Persona> ObtenerPersonas()
+        public IEnumerable<Persona> ObtenerPersonas()
         {
-            var path = System.Windows.Forms.Application.StartupPath;
-            path += "\\Personas.Json";
+            var pMapper = new PersonaMapper();
 
-            if (!System.IO.File.Exists(path))
-            {
-                return new List<Persona>();
-            }
+            var todasPersonas = pMapper.ObtenerTodas();
 
-            var contenido = System.IO.File.ReadAllText(path);
-
-            var lista = JsonConvert.DeserializeObject<List<Persona>>(contenido);
-
-            return lista;
+            return todasPersonas;
         }
 
         public void GrabarPersona(List<Persona> personas)
         {
-            var personasSerializados = JsonConvert.SerializeObject(personas);
+            var persistor = new EntityPersistor<Persona>();
 
-            var path = System.Windows.Forms.Application.StartupPath;
-            path += "\\Personas.Json";
-            System.IO.File.WriteAllText(path, personasSerializados);
+            persistor.Grabar(personas);
         }
 
     }

@@ -9,11 +9,12 @@ namespace Entidades
     public abstract class EntidadBase : IEntidad
     {
         public Guid Id { get; set; }
+
+
+        protected EntidadBase()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 
-    //protected EntidadBase()
-    //{
-    //    Id = Guid.NewGuid();
-    //}
-         
 }
