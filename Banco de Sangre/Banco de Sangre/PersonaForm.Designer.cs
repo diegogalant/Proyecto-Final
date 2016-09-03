@@ -40,13 +40,13 @@
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.dniTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.grupoSanguineoCombobox = new System.Windows.Forms.ComboBox();
-            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.factorRhCheckBox = new System.Windows.Forms.CheckBox();
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             dniLabel = new System.Windows.Forms.Label();
@@ -111,6 +111,15 @@
             descripcionLabel.TabIndex = 0;
             descripcionLabel.Text = "Descripcion:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(28, 180);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(59, 13);
+            label1.TabIndex = 12;
+            label1.Text = "Factor RH:";
+            // 
             // aceptarButton
             // 
             this.aceptarButton.Location = new System.Drawing.Point(117, 200);
@@ -138,6 +147,10 @@
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidoTextBox.TabIndex = 2;
+            // 
+            // personaBindingSource
+            // 
+            this.personaBindingSource.DataSource = typeof(Persona);
             // 
             // direccionTextBox
             // 
@@ -173,35 +186,21 @@
             // 
             // grupoSanguineoCombobox
             // 
-            this.grupoSanguineoCombobox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personaBindingSource, "GrupoSanguineo", true));
             this.grupoSanguineoCombobox.FormattingEnabled = true;
             this.grupoSanguineoCombobox.Location = new System.Drawing.Point(103, 152);
             this.grupoSanguineoCombobox.Name = "grupoSanguineoCombobox";
             this.grupoSanguineoCombobox.Size = new System.Drawing.Size(100, 21);
             this.grupoSanguineoCombobox.TabIndex = 10;
-            this.grupoSanguineoCombobox.SelectedIndexChanged += new System.EventHandler(this.grupoSanguineoCombobox_SelectedIndexChanged);
             // 
-            // personaBindingSource
+            // factorRhCheckBox
             // 
-            this.personaBindingSource.DataSource = typeof(Persona);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(103, 179);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(28, 180);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(59, 13);
-            label1.TabIndex = 12;
-            label1.Text = "Factor RH:";
+            this.factorRhCheckBox.AutoSize = true;
+            this.factorRhCheckBox.Location = new System.Drawing.Point(103, 179);
+            this.factorRhCheckBox.Name = "factorRhCheckBox";
+            this.factorRhCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.factorRhCheckBox.TabIndex = 11;
+            this.factorRhCheckBox.UseVisualStyleBackColor = true;
+            this.factorRhCheckBox.CheckedChanged += new System.EventHandler(this.factorRhCheckBox_CheckedChanged);
             // 
             // PersonaForm
             // 
@@ -209,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 236);
             this.Controls.Add(label1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.factorRhCheckBox);
             this.Controls.Add(this.grupoSanguineoCombobox);
             this.Controls.Add(descripcionLabel);
             this.Controls.Add(apellidoLabel);
@@ -244,7 +243,7 @@
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.ComboBox grupoSanguineoCombobox;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox factorRhCheckBox;
     }
 }
 

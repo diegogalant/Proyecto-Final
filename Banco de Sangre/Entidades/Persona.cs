@@ -4,11 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
+using Newtonsoft.Json;
 
 public class Persona : EntidadBase
 {
+
+    public Persona()
+    {
+       GruposSanguineos = new List<GrupoSanguineo>();
+       IdGruposSanguineos = new List<Guid>();
+    }
+
 
     public string Nombre { get; set; }
 
@@ -20,7 +26,10 @@ public class Persona : EntidadBase
 
     public int Telefono { get; set; }
 
-    public Guid GrupoSanguineo { get; set; }
-    
+    [JsonIgnore]
+    public List<GrupoSanguineo> GruposSanguineos { get; private set; }
+
+    public List<Guid> IdGruposSanguineos { get; set; }
+
 }
 

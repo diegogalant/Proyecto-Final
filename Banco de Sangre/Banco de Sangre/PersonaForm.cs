@@ -19,24 +19,9 @@ namespace Banco_de_Sangre
             InitializeComponent();
         }
 
-        private void aceptarButton_Click(object sender, EventArgs e)
-        {
-           var personaEnEdicion = (Persona)personaBindingSource.Current;
-
-            var gSanguineo = (GrupoSanguineo)grupoSanguineoCombobox.SelectedItem;
-
-            personaEnEdicion.GrupoSanguineo = gSanguineo.Id;
-
-            var r = new PersonaMapper();
-            r.Grabar(personaEnEdicion);
-
-            Close();
-        }
 
         private void PersonaForm_Load(object sender, EventArgs e)
         {
-            checkBox1.Enabled = false;
-
             personaBindingSource.DataSource = new Persona();
 
             var gSanguineo = new GrupoSanguineoRule();
@@ -44,19 +29,42 @@ namespace Banco_de_Sangre
             grupoSanguineoCombobox.DisplayMember = "Descripcion";
         }
 
+
+
+        private void aceptarButton_Click(object sender, EventArgs e)
+        {
+           var personaEnEdicion = (Persona)personaBindingSource.Current;
+
+            var grupoSanguineo = new GrupoSanguineo();
+
+            grupoSanguineo.Descripcion = grupoSanguineoCombobox.SelectedItem.ToString();
+            
+            if (factorRhCheckBox.Checked)
+            {
+                grupoSanguineo.FactorRh = true;
+            }
+            else
+            {
+                grupoSanguineo.FactorRh = false;
+            }
+
+            personaEnEdicion.IdGruposSanguineos.Add(grupoSanguineo.Id);
+
+            var r = new PersonaMapper();
+            r.Grabar(personaEnEdicion);
+
+            Close();
+        }
+
         private void cancelarButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void grupoSanguineoCombobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var itemSeleccionado = (GrupoSanguineo)grupoSanguineoCombobox.SelectedItem;
 
-            if (itemSeleccionado.Descripcion == "A+")
-            {
-                itemSeleccionado.FactorRh = true;
-            }   
+        private void factorRhCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

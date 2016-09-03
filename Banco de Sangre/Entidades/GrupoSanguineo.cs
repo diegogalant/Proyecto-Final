@@ -12,8 +12,6 @@ namespace Entidades
 
         public bool FactorRh { get; set; }
 
-
-
         public string DescripcionYFactor()
         {
             return Descripcion + " - " + FactorRh;
