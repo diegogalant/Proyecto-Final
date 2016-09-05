@@ -38,13 +38,13 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.Agregar = new System.Windows.Forms.ToolStripButton();
             this.Eliminar = new System.Windows.Forms.ToolStripButton();
             this.Actualizar = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.BorrarLista = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataGridView)).BeginInit();
@@ -84,12 +84,11 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn5});
             this.personaDataGridView.DataSource = this.personaBindingSource;
-            this.personaDataGridView.Location = new System.Drawing.Point(6, 33);
+            this.personaDataGridView.Location = new System.Drawing.Point(6, 48);
             this.personaDataGridView.Name = "personaDataGridView";
-            this.personaDataGridView.Size = new System.Drawing.Size(503, 239);
+            this.personaDataGridView.Size = new System.Drawing.Size(503, 224);
             this.personaDataGridView.TabIndex = 1;
             this.personaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personaDataGridView_CellContentClick);
             // 
@@ -123,12 +122,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "GrupoSanguineo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "GrupoSanguineo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // personaBindingSource
             // 
             this.personaBindingSource.DataSource = typeof(Persona);
@@ -139,7 +132,8 @@
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Agregar,
             this.Eliminar,
-            this.Actualizar});
+            this.Actualizar,
+            this.BorrarLista});
             this.toolStrip2.Location = new System.Drawing.Point(3, 3);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(509, 25);
@@ -153,7 +147,7 @@
             this.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(23, 22);
-            this.Agregar.Text = "toolStripButton1";
+            this.Agregar.Text = "AgregarButton";
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Eliminar
@@ -163,7 +157,7 @@
             this.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(23, 22);
-            this.Eliminar.Text = "toolStripButton1";
+            this.Eliminar.Text = "EliminarButton";
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // Actualizar
@@ -173,7 +167,7 @@
             this.Actualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Actualizar.Name = "Actualizar";
             this.Actualizar.Size = new System.Drawing.Size(23, 22);
-            this.Actualizar.Text = "toolStripButton2";
+            this.Actualizar.Text = "ActualizarButton";
             this.Actualizar.Click += new System.EventHandler(this.Actualizar_Click);
             // 
             // tabPage2
@@ -185,6 +179,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Banco";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // BorrarLista
+            // 
+            this.BorrarLista.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BorrarLista.Image = ((System.Drawing.Image)(resources.GetObject("BorrarLista.Image")));
+            this.BorrarLista.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BorrarLista.Name = "BorrarLista";
+            this.BorrarLista.Size = new System.Drawing.Size(23, 22);
+            this.BorrarLista.Text = "BorrarTodoButton";
+            this.BorrarLista.Click += new System.EventHandler(this.BorrarLista_Click);
             // 
             // Banco_de_Sangre
             // 
@@ -224,5 +228,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.BindingSource personaBindingSource;
+        private System.Windows.Forms.ToolStripButton BorrarLista;
     }
 }

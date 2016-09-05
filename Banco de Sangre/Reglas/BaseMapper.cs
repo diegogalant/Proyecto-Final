@@ -7,7 +7,7 @@ using Entidades;
 
 namespace Reglas
 {
-    public abstract class BaseMapper <T> where T: IEntidad
+    public abstract class BaseMapper<T> where T : IEntidad
     {
         public virtual void Grabar(T entidad)
         {
@@ -56,6 +56,29 @@ namespace Reglas
                 FirstOrDefault(p => p.Id.Equals(id));
         }
 
+        public void EliminarTodas() //Elimina toda la lista
+        {
+            var itemsAGrabar = new List<T>();         
+
+            var persistor = new EntityPersistor<T>();
+            persistor.Grabar(itemsAGrabar);
+        }
+
+        public virtual void Eliminar(T entidad)
+        {
+            var itemsAGrabar = new List<T>();
+      
+            var itemsExistentes = ObtenerTodas().ToList();
+            foreach (var item in itemsExistentes)
+            {
+                if (!item.Id.Equals(entidad.Id))
+                {
+                    itemsAGrabar.Add(item);
+                }
+            }
+
+            var persistor = new EntityPersistor<T>();
+            persistor.Grabar(itemsAGrabar);
+        }
     }
 }
-

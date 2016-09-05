@@ -66,5 +66,6 @@ namespace Banco_de_Sangre
         {
             
         }
-    }
+
+     }
 }

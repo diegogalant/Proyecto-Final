@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\Downloads\json.net\json.net\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Documents\json.net\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,6 +59,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
