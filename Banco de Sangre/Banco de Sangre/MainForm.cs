@@ -69,9 +69,17 @@ namespace Banco_de_Sangre
         {
             var borrartodo = new PersonaMapper();
 
-            borrartodo.EliminarTodas();
+            //Muestra un Messagebox si o no
+            DialogResult result = MessageBox.Show("¿Seguro que desea borrar la lista completa?", "Borrar todo", MessageBoxButtons.YesNo);
 
-          //poner un cuadro de dialogo que diga si o no
+            if (result == DialogResult.Yes)
+            {
+                borrartodo.EliminarTodas();
+            }
+            else if (result == DialogResult.No)
+            {
+            }
+            
             Refrescar();
         }
     }
