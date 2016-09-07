@@ -15,7 +15,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return Descripcion + " - " + FactorRh;
+            return Descripcion;
         }
     }
 }

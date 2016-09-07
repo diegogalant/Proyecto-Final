@@ -37,7 +37,6 @@ namespace Banco_de_Sangre
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label descripcionLabel;
-            System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonaForm));
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
@@ -48,15 +47,12 @@ namespace Banco_de_Sangre
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.grupoSanguineoCombobox = new System.Windows.Forms.ComboBox();
-            this.factorRhCheckBox = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             dniLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,15 +109,6 @@ namespace Banco_de_Sangre
             descripcionLabel.Size = new System.Drawing.Size(66, 13);
             descripcionLabel.TabIndex = 0;
             descripcionLabel.Text = "Descripcion:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(28, 180);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(59, 13);
-            label1.TabIndex = 12;
-            label1.Text = "Factor RH:";
             // 
             // aceptarButton
             // 
@@ -197,34 +184,11 @@ namespace Banco_de_Sangre
             this.grupoSanguineoCombobox.Size = new System.Drawing.Size(143, 21);
             this.grupoSanguineoCombobox.TabIndex = 10;
             // 
-            // factorRhCheckBox
-            // 
-            this.factorRhCheckBox.AutoSize = true;
-            this.factorRhCheckBox.Location = new System.Drawing.Point(103, 179);
-            this.factorRhCheckBox.Name = "factorRhCheckBox";
-            this.factorRhCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.factorRhCheckBox.TabIndex = 11;
-            this.factorRhCheckBox.UseVisualStyleBackColor = true;
-            this.factorRhCheckBox.CheckedChanged += new System.EventHandler(this.factorRhCheckBox_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(19, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // PersonaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 236);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(label1);
-            this.Controls.Add(this.factorRhCheckBox);
             this.Controls.Add(this.grupoSanguineoCombobox);
             this.Controls.Add(descripcionLabel);
             this.Controls.Add(apellidoLabel);
@@ -259,8 +223,6 @@ namespace Banco_de_Sangre
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.ComboBox grupoSanguineoCombobox;
-        private System.Windows.Forms.CheckBox factorRhCheckBox;
-        private System.Windows.Forms.Button button1;
     }
 }
 

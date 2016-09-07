@@ -47,11 +47,34 @@ namespace Banco_de_Sangre
             this.Actualizar = new System.Windows.Forms.ToolStripButton();
             this.BorrarLista = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupoSanguineoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idGrupoSanguineoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.porGrupoRadioButton = new System.Windows.Forms.RadioButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.porNombreRadioButton = new System.Windows.Forms.RadioButton();
+            this.porDniRadioButton = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buscarButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             this.toolStrip2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -67,6 +90,7 @@ namespace Banco_de_Sangre
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.personaDataGridView);
             this.tabPage1.Controls.Add(this.toolStrip2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -88,10 +112,10 @@ namespace Banco_de_Sangre
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.personaDataGridView.DataSource = this.personaBindingSource;
-            this.personaDataGridView.Location = new System.Drawing.Point(6, 48);
+            this.personaDataGridView.Location = new System.Drawing.Point(6, 71);
             this.personaDataGridView.Name = "personaDataGridView";
             this.personaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.personaDataGridView.Size = new System.Drawing.Size(503, 224);
+            this.personaDataGridView.Size = new System.Drawing.Size(503, 201);
             this.personaDataGridView.TabIndex = 1;
             this.personaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personaDataGridView_CellContentClick);
             // 
@@ -127,7 +151,7 @@ namespace Banco_de_Sangre
             // 
             // personaBindingSource
             // 
-            this.personaBindingSource.DataSource = typeof(Persona);
+            this.personaBindingSource.DataSource = typeof(Entidades.Persona);
             this.personaBindingSource.DataSourceChanged += new System.EventHandler(this.personaBindingSource_DataSourceChanged);
             // 
             // toolStrip2
@@ -185,6 +209,8 @@ namespace Banco_de_Sangre
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -192,6 +218,175 @@ namespace Banco_de_Sangre
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Banco";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.porGrupoRadioButton);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(512, 34);
+            this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellidoDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.dniDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.grupoSanguineoDataGridViewTextBoxColumn,
+            this.idGrupoSanguineoDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.personaBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 40);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(506, 235);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            // 
+            // dniDataGridViewTextBoxColumn
+            // 
+            this.dniDataGridViewTextBoxColumn.DataPropertyName = "Dni";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "Dni";
+            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // grupoSanguineoDataGridViewTextBoxColumn
+            // 
+            this.grupoSanguineoDataGridViewTextBoxColumn.DataPropertyName = "GrupoSanguineo";
+            this.grupoSanguineoDataGridViewTextBoxColumn.HeaderText = "GrupoSanguineo";
+            this.grupoSanguineoDataGridViewTextBoxColumn.Name = "grupoSanguineoDataGridViewTextBoxColumn";
+            // 
+            // idGrupoSanguineoDataGridViewTextBoxColumn
+            // 
+            this.idGrupoSanguineoDataGridViewTextBoxColumn.DataPropertyName = "IdGrupoSanguineo";
+            this.idGrupoSanguineoDataGridViewTextBoxColumn.HeaderText = "IdGrupoSanguineo";
+            this.idGrupoSanguineoDataGridViewTextBoxColumn.Name = "idGrupoSanguineoDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // porGrupoRadioButton
+            // 
+            this.porGrupoRadioButton.AutoSize = true;
+            this.porGrupoRadioButton.Location = new System.Drawing.Point(12, 9);
+            this.porGrupoRadioButton.Name = "porGrupoRadioButton";
+            this.porGrupoRadioButton.Size = new System.Drawing.Size(123, 17);
+            this.porGrupoRadioButton.TabIndex = 0;
+            this.porGrupoRadioButton.TabStop = true;
+            this.porGrupoRadioButton.Text = "Por grupo sanguineo";
+            this.porGrupoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(291, 6);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.buscarButton);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.porDniRadioButton);
+            this.panel2.Controls.Add(this.porNombreRadioButton);
+            this.panel2.Location = new System.Drawing.Point(6, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(503, 34);
+            this.panel2.TabIndex = 2;
+            // 
+            // porNombreRadioButton
+            // 
+            this.porNombreRadioButton.AutoSize = true;
+            this.porNombreRadioButton.Location = new System.Drawing.Point(13, 8);
+            this.porNombreRadioButton.Name = "porNombreRadioButton";
+            this.porNombreRadioButton.Size = new System.Drawing.Size(79, 17);
+            this.porNombreRadioButton.TabIndex = 0;
+            this.porNombreRadioButton.TabStop = true;
+            this.porNombreRadioButton.Text = "Por nombre";
+            this.porNombreRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // porDniRadioButton
+            // 
+            this.porDniRadioButton.AutoSize = true;
+            this.porDniRadioButton.Location = new System.Drawing.Point(109, 7);
+            this.porDniRadioButton.Name = "porDniRadioButton";
+            this.porDniRadioButton.Size = new System.Drawing.Size(97, 17);
+            this.porDniRadioButton.TabIndex = 1;
+            this.porDniRadioButton.TabStop = true;
+            this.porDniRadioButton.Text = "Por documento";
+            this.porDniRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(212, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // buscarButton
+            // 
+            this.buscarButton.Location = new System.Drawing.Point(331, 5);
+            this.buscarButton.Name = "buscarButton";
+            this.buscarButton.Size = new System.Drawing.Size(75, 23);
+            this.buscarButton.TabIndex = 3;
+            this.buscarButton.Text = "Buscar";
+            this.buscarButton.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(431, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(141, 9);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(111, 17);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Por compatibilidad";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -210,6 +405,12 @@ namespace Banco_de_Sangre
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +433,24 @@ namespace Banco_de_Sangre
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.BindingSource personaBindingSource;
         private System.Windows.Forms.ToolStripButton BorrarLista;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grupoSanguineoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idGrupoSanguineoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton porGrupoRadioButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton porDniRadioButton;
+        private System.Windows.Forms.RadioButton porNombreRadioButton;
+        private System.Windows.Forms.Button buscarButton;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button1;
     }
 }
