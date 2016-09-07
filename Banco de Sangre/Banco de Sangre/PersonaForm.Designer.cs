@@ -1,4 +1,6 @@
-﻿namespace Banco_de_Sangre
+﻿using Entidades;
+
+namespace Banco_de_Sangre
 {
     partial class PersonaForm
     {
@@ -47,6 +49,7 @@
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.grupoSanguineoCombobox = new System.Windows.Forms.ComboBox();
             this.factorRhCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             apellidoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             dniLabel = new System.Windows.Forms.Label();
@@ -150,7 +153,7 @@
             // 
             // personaBindingSource
             // 
-            this.personaBindingSource.DataSource = typeof(Persona);
+            this.personaBindingSource.DataSource = typeof(Entidades.Persona);
             // 
             // direccionTextBox
             // 
@@ -186,10 +189,12 @@
             // 
             // grupoSanguineoCombobox
             // 
+            this.grupoSanguineoCombobox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.personaBindingSource, "GrupoSanguineo", true));
+            this.grupoSanguineoCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grupoSanguineoCombobox.FormattingEnabled = true;
             this.grupoSanguineoCombobox.Location = new System.Drawing.Point(103, 152);
             this.grupoSanguineoCombobox.Name = "grupoSanguineoCombobox";
-            this.grupoSanguineoCombobox.Size = new System.Drawing.Size(100, 21);
+            this.grupoSanguineoCombobox.Size = new System.Drawing.Size(143, 21);
             this.grupoSanguineoCombobox.TabIndex = 10;
             // 
             // factorRhCheckBox
@@ -202,11 +207,22 @@
             this.factorRhCheckBox.UseVisualStyleBackColor = true;
             this.factorRhCheckBox.CheckedChanged += new System.EventHandler(this.factorRhCheckBox_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PersonaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 236);
+            this.Controls.Add(this.button1);
             this.Controls.Add(label1);
             this.Controls.Add(this.factorRhCheckBox);
             this.Controls.Add(this.grupoSanguineoCombobox);
@@ -244,6 +260,7 @@
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.ComboBox grupoSanguineoCombobox;
         private System.Windows.Forms.CheckBox factorRhCheckBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

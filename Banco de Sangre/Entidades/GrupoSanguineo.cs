@@ -12,7 +12,8 @@ namespace Entidades
 
         public bool FactorRh { get; set; }
 
-        public string DescripcionYFactor()
+
+        public override string ToString()
         {
             return Descripcion + " - " + FactorRh;
         }

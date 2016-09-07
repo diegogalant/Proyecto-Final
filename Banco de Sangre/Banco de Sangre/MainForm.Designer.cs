@@ -1,6 +1,8 @@
-﻿namespace Banco_de_Sangre
+﻿using Entidades;
+
+namespace Banco_de_Sangre
 {
-    partial class Banco_de_Sangre
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Banco_de_Sangre));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.personaDataGridView = new System.Windows.Forms.DataGridView();
@@ -191,16 +193,16 @@
             this.tabPage2.Text = "Banco";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Banco_de_Sangre
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 311);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Banco_de_Sangre";
+            this.Name = "MainForm";
             this.Text = "Banco de Sangre";
-            this.Load += new System.EventHandler(this.Banco_de_Sangre_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

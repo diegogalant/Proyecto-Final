@@ -9,13 +9,22 @@ namespace Reglas
 {
     public class GrupoSanguineoRule
     {
-        public IEnumerable<GrupoSanguineo> GenerarGruposSanguineos()
+        public void GenerarGruposSanguineos()
         {
+            var gsm = new GrupoSanguineoMapper();
+            var grupos = gsm.ObtenerTodas();
+
+            if (grupos.Any())
+                return;
+
+            // si no hay nada, generamos por unica vez    
+
             var gruposSanguineos = new List<GrupoSanguineo>();
 
-            //A
+            //A-
             var grupoSanguineoA = new GrupoSanguineo();
-            grupoSanguineoA.Descripcion = "A";
+            grupoSanguineoA.Descripcion = "A-";
+            grupoSanguineoA.FactorRh = false;
 
             gruposSanguineos.Add(grupoSanguineoA);
 
@@ -42,7 +51,7 @@ namespace Reglas
             gruposSanguineos.Add(grupoSanguineo0);
 
 
-            return gruposSanguineos;
+            gsm.Grabar(gruposSanguineos);
         }     
 
     }

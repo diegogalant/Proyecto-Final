@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Reglas
 {
-    class GrupoSanguineoMapper : BaseMapper<GrupoSanguineo>
+    public class GrupoSanguineoMapper : BaseMapper<GrupoSanguineo>
     {
     }
 }

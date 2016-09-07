@@ -8,16 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Banco_de_Sangre
 {
-    public partial class Banco_de_Sangre : Form
+    public partial class MainForm : Form
     {
         private string _action;
         private Persona _persona;
 
 
-        public Banco_de_Sangre()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -43,8 +44,13 @@ namespace Banco_de_Sangre
             pForm.ShowDialog();
         }
 
-        private void Banco_de_Sangre_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
+
+            var gSanguineoRule = new GrupoSanguineoRule();
+            gSanguineoRule.GenerarGruposSanguineos();
+
+
             Refrescar();
         }
 

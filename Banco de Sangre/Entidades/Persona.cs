@@ -1,35 +1,32 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-public class Persona : EntidadBase
+namespace Entidades
 {
-
-    public Persona()
+    public class Persona : EntidadBase
     {
-       GruposSanguineos = new List<GrupoSanguineo>();
-       IdGruposSanguineos = new List<Guid>();
+
+        public Persona()
+        {
+        }
+
+
+        public string Nombre { get; set; }
+
+        public string Apellido { get; set; }
+
+        public string Direccion { get; set; }
+
+        public int Dni { get; set; }
+
+        public int Telefono { get; set; }
+
+        [JsonIgnore]
+        public GrupoSanguineo GrupoSanguineo { get;  set; }
+
+        public Guid IdGrupoSanguineo { get; set; }
+
     }
-
-
-    public string Nombre { get; set; }
-
-    public string Apellido { get; set; }
-
-    public string Direccion { get; set; }
-
-    public int Dni { get; set; }
-
-    public int Telefono { get; set; }
-
-    [JsonIgnore]
-    public List<GrupoSanguineo> GruposSanguineos { get; private set; }
-
-    public List<Guid> IdGruposSanguineos { get; set; }
-
 }
 
