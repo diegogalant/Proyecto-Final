@@ -42,7 +42,6 @@ namespace Reglas
             gruposSanguineos.Add(grupoSanguineo0);
 
 
-
             return gruposSanguineos;
         }     
 
