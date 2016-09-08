@@ -24,7 +24,7 @@ namespace Banco_de_Sangre
         {
             personaBindingSource.DataSource = new Persona();
             var gsm = new GrupoSanguineoMapper();
-            grupoSanguineoCombobox.DataSource = gsm.ObtenerTodas();
+            grupoSanguineoComboBox.DataSource = gsm.ObtenerTodas();
 
         }
 

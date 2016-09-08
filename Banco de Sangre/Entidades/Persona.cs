@@ -22,6 +22,10 @@ namespace Entidades
 
         public int Telefono { get; set; }
 
+        public bool Dador { get; set; }
+
+        public bool Receptor { get; set; }
+
         [JsonIgnore]
         public GrupoSanguineo GrupoSanguineo { get;  set; }
 

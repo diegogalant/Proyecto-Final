@@ -14,9 +14,7 @@ namespace Banco_de_Sangre
 {
     public partial class MainForm : Form
     {
-        private string _action;
         private Persona _persona;
-
 
         public MainForm()
         {
@@ -46,17 +44,13 @@ namespace Banco_de_Sangre
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             var gSanguineoRule = new GrupoSanguineoRule();
             gSanguineoRule.GenerarGruposSanguineos();
 
+            var gsm = new GrupoSanguineoMapper();
+            grupoSanguineoComboBox.DataSource = gsm.ObtenerTodas();
 
             Refrescar();
-        }
-
-        private void personaBindingSource_DataSourceChanged(object sender, EventArgs e)
-        {
-            //Refrescar();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
@@ -67,8 +61,21 @@ namespace Banco_de_Sangre
 
         private void Refrescar()
         {
-            var r = new PersonaMapper();
-            personaBindingSource.DataSource = r.ObtenerTodas();
+            var personaMapper = new PersonaMapper();
+            personaBindingSource.DataSource = personaMapper.ObtenerTodas();
+
+            
+            if (porGrupoSanguineoRadioButton.Checked)
+            {
+                var grupoSanguineo = (GrupoSanguineo)grupoSanguineoComboBox.SelectedItem;
+                personaBindingSource.DataSource = personaMapper.ObtenerPorGrupoSanguineo(grupoSanguineo);                                  
+            }
+
+            if(porCompatibilidadRadioButton.Checked)
+            {
+                var grupoSanguineo = (GrupoSanguineo)grupoSanguineoComboBox.SelectedItem;
+                personaBindingSource.DataSource = personaMapper.ObtenerPorCompatibilidadDonadores(grupoSanguineo);
+            }
         }
 
         private void BorrarLista_Click(object sender, EventArgs e)
@@ -86,6 +93,11 @@ namespace Banco_de_Sangre
             {
             }
             
+            Refrescar();
+        }
+
+        private void bancoBuscarButton_Click(object sender, EventArgs e)
+        {
             Refrescar();
         }
     }

@@ -21,34 +21,61 @@ namespace Reglas
 
             var gruposSanguineos = new List<GrupoSanguineo>();
 
+            //A+
+            var grupoSanguineoAP = new GrupoSanguineo();
+            grupoSanguineoAP.Descripcion = "A+";
+            grupoSanguineoAP.FactorRh = true;
+
+            gruposSanguineos.Add(grupoSanguineoAP);
+
             //A-
-            var grupoSanguineoA = new GrupoSanguineo();
-            grupoSanguineoA.Descripcion = "A-";
-            grupoSanguineoA.FactorRh = false;
+            var grupoSanguineoAN = new GrupoSanguineo();
+            grupoSanguineoAN.Descripcion = "A-";
+            grupoSanguineoAN.FactorRh = false;
 
-            gruposSanguineos.Add(grupoSanguineoA);
+            gruposSanguineos.Add(grupoSanguineoAN);
 
-            //B
-            var grupoSanguineoB = new GrupoSanguineo();
-            grupoSanguineoB.Descripcion = "B";
-            grupoSanguineoA.FactorRh = true;
+            //B+
+            var grupoSanguineoBP = new GrupoSanguineo();
+            grupoSanguineoBP.Descripcion = "B+";
+            grupoSanguineoBP.FactorRh = true;
 
+            gruposSanguineos.Add(grupoSanguineoBP);
 
-            gruposSanguineos.Add(grupoSanguineoB);
+            //B-
+            var grupoSanguineoBN = new GrupoSanguineo();
+            grupoSanguineoBN.Descripcion = "B-";
+            grupoSanguineoBN.FactorRh = false;
+
+            gruposSanguineos.Add(grupoSanguineoBN);
 
             //AB+
-            var grupoSanguineoAB = new GrupoSanguineo();
-            grupoSanguineoAB.Descripcion = "AB";
-            grupoSanguineoAB.FactorRh = true;
+            var grupoSanguineoABP = new GrupoSanguineo();
+            grupoSanguineoABP.Descripcion = "AB+";
+            grupoSanguineoABP.FactorRh = true;
 
-            gruposSanguineos.Add(grupoSanguineoAB);
+            gruposSanguineos.Add(grupoSanguineoABP);
+
+            //AB-
+            var grupoSanguineoABN = new GrupoSanguineo();
+            grupoSanguineoABN.Descripcion = "AB-";
+            grupoSanguineoABN.FactorRh = false;
+
+            gruposSanguineos.Add(grupoSanguineoABN);
 
             //0+
-            var grupoSanguineo0 = new GrupoSanguineo();
-            grupoSanguineo0.Descripcion = "0";
-            grupoSanguineo0.FactorRh = true;
+            var grupoSanguineo0P = new GrupoSanguineo();
+            grupoSanguineo0P.Descripcion = "0+";
+            grupoSanguineo0P.FactorRh = true;
 
-            gruposSanguineos.Add(grupoSanguineo0);
+            gruposSanguineos.Add(grupoSanguineo0P);
+
+            //0-
+            var grupoSanguineo0N = new GrupoSanguineo();
+            grupoSanguineo0N.Descripcion = "0-";
+            grupoSanguineo0N.FactorRh = false;
+
+            gruposSanguineos.Add(grupoSanguineo0N);
 
 
             gsm.Grabar(gruposSanguineos);
