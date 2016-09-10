@@ -78,6 +78,7 @@ namespace Banco_de_Sangre
             var extraccionMapper = new ExtraccionMapper();
 
             var pMapper = new PersonaMapper();
+
             if (porGrupoSanguineoRadioButton.Checked)
             {
                 var grupoSanguineo = (GrupoSanguineo)grupoSanguineoComboBox.SelectedItem;
@@ -135,6 +136,11 @@ namespace Banco_de_Sangre
             if (porFechasRadioButton.Checked)
             {
                 extraccionBindingSource.DataSource = extraccionMapper.ObtenerPorFechas(fechaDesdeDateTimePicker.Value, hastaDateTimePicker.Value);
+            }
+
+            if (extraccionTodasRadioButton.Checked)
+            {
+                extraccionBindingSource.DataSource = extraccionMapper.ObtenerTodas();
             }
         }
 
@@ -266,17 +272,5 @@ namespace Banco_de_Sangre
         {
             Refrescar();
         }
-
-
-        //private void personaDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    var extraccionForm = new ExtraccionForm();
-
-        //    extraccionForm.Persona = (Persona)personaBindingSource.Current;
-        //    extraccionForm.Action = "Cargar";
-        //    extraccionForm.EstoyCargandoPersona = true;
-
-        //    extraccionForm.Show();
-        //}
     }
 }

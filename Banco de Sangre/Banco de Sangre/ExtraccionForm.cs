@@ -24,22 +24,15 @@ namespace Banco_de_Sangre
             InitializeComponent();
         }
 
-        //private void personaLabel_Click(object sender, EventArgs e)
-        //{
-        //    EstoyCargandoPersona = true;
-
-        //    var main = new MainForm();
-        //    Hide();
-        //    main.Activate();
-        //}
-
-
         private void ExtraccionForm_Load(object sender, EventArgs e)
         {
             fechaDateTimePicker.Focus();
 
             var eRule = new ExtraccionRule();
             tiposAnalisisComboBox.DataSource= eRule.CargarTiposAnalisis();
+
+            var pMapper = new PersonaMapper();
+            personaCombobox.DataSource = pMapper.ObtenerTodas();
 
             if (Action == "Agregar")
             {
@@ -54,7 +47,7 @@ namespace Banco_de_Sangre
         private void aceptarButton_Click(object sender, EventArgs e)
         {
             var extraccionEnEdicion = (Extraccion)extraccionBindingSource.Current;
-
+            extraccionEnEdicion.Persona = (Persona)personaCombobox.SelectedItem;
             var extraccionRule = new ExtraccionRule();
 
             if (Action == "Agregar")

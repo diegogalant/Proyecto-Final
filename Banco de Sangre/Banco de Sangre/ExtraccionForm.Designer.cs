@@ -35,15 +35,15 @@
             System.Windows.Forms.Label personaLabelS;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label doctorSolicitanteLabel;
-            this.extraccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.doctorSolicitanteTextBox = new System.Windows.Forms.TextBox();
             this.alergiasCheckBox = new System.Windows.Forms.CheckBox();
             this.aceptarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
-            this.personaLabel = new System.Windows.Forms.Label();
             this.tiposAnalisisComboBox = new System.Windows.Forms.ComboBox();
+            this.personaCombobox = new System.Windows.Forms.ComboBox();
+            this.extraccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             alergiasLabel = new System.Windows.Forms.Label();
             tipoAnalisisLabel = new System.Windows.Forms.Label();
             notasLabel = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             // alergiasLabel
             // 
             alergiasLabel.AutoSize = true;
-            alergiasLabel.Location = new System.Drawing.Point(17, 90);
+            alergiasLabel.Location = new System.Drawing.Point(17, 92);
             alergiasLabel.Name = "alergiasLabel";
             alergiasLabel.Size = new System.Drawing.Size(47, 13);
             alergiasLabel.TabIndex = 1;
@@ -65,7 +65,7 @@
             // tipoAnalisisLabel
             // 
             tipoAnalisisLabel.AutoSize = true;
-            tipoAnalisisLabel.Location = new System.Drawing.Point(15, 62);
+            tipoAnalisisLabel.Location = new System.Drawing.Point(15, 65);
             tipoAnalisisLabel.Name = "tipoAnalisisLabel";
             tipoAnalisisLabel.Size = new System.Drawing.Size(69, 13);
             tipoAnalisisLabel.TabIndex = 11;
@@ -83,7 +83,7 @@
             // personaLabelS
             // 
             personaLabelS.AutoSize = true;
-            personaLabelS.Location = new System.Drawing.Point(15, 15);
+            personaLabelS.Location = new System.Drawing.Point(15, 9);
             personaLabelS.Name = "personaLabelS";
             personaLabelS.Size = new System.Drawing.Size(49, 13);
             personaLabelS.TabIndex = 7;
@@ -92,7 +92,7 @@
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(15, 39);
+            fechaLabel.Location = new System.Drawing.Point(17, 39);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(40, 13);
             fechaLabel.TabIndex = 5;
@@ -107,10 +107,6 @@
             doctorSolicitanteLabel.TabIndex = 3;
             doctorSolicitanteLabel.Text = "Doctor Solicitante:";
             // 
-            // extraccionBindingSource
-            // 
-            this.extraccionBindingSource.DataSource = typeof(Entidades.Extraccion);
-            // 
             // notasTextBox
             // 
             this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.extraccionBindingSource, "Notas", true));
@@ -121,7 +117,7 @@
             // 
             // fechaDateTimePicker
             // 
-            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.extraccionBindingSource, "Fecha", true));
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.extraccionBindingSource, "Fecha", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.fechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaDateTimePicker.Location = new System.Drawing.Point(118, 33);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
@@ -139,7 +135,7 @@
             // alergiasCheckBox
             // 
             this.alergiasCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.extraccionBindingSource, "Alergias", true));
-            this.alergiasCheckBox.Location = new System.Drawing.Point(118, 85);
+            this.alergiasCheckBox.Location = new System.Drawing.Point(118, 87);
             this.alergiasCheckBox.Name = "alergiasCheckBox";
             this.alergiasCheckBox.Size = new System.Drawing.Size(200, 24);
             this.alergiasCheckBox.TabIndex = 3;
@@ -165,33 +161,36 @@
             this.cancelarButton.UseVisualStyleBackColor = true;
             this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
-            // personaLabel
-            // 
-            this.personaLabel.AutoSize = true;
-            this.personaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.personaLabel.Location = new System.Drawing.Point(115, 12);
-            this.personaLabel.Name = "personaLabel";
-            this.personaLabel.Size = new System.Drawing.Size(194, 16);
-            this.personaLabel.TabIndex = 0;
-            this.personaLabel.Text = "Seleccione una persona...";
-            // 
             // tiposAnalisisComboBox
             // 
             this.tiposAnalisisComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.extraccionBindingSource, "TipoAnalisis", true));
             this.tiposAnalisisComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tiposAnalisisComboBox.FormattingEnabled = true;
-            this.tiposAnalisisComboBox.Location = new System.Drawing.Point(118, 58);
+            this.tiposAnalisisComboBox.Location = new System.Drawing.Point(118, 61);
             this.tiposAnalisisComboBox.Name = "tiposAnalisisComboBox";
             this.tiposAnalisisComboBox.Size = new System.Drawing.Size(200, 21);
             this.tiposAnalisisComboBox.TabIndex = 12;
+            // 
+            // personaCombobox
+            // 
+            this.personaCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.personaCombobox.FormattingEnabled = true;
+            this.personaCombobox.Location = new System.Drawing.Point(118, 6);
+            this.personaCombobox.Name = "personaCombobox";
+            this.personaCombobox.Size = new System.Drawing.Size(200, 21);
+            this.personaCombobox.TabIndex = 13;
+            // 
+            // extraccionBindingSource
+            // 
+            this.extraccionBindingSource.DataSource = typeof(Entidades.Extraccion);
             // 
             // ExtraccionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 202);
+            this.Controls.Add(this.personaCombobox);
             this.Controls.Add(this.tiposAnalisisComboBox);
-            this.Controls.Add(this.personaLabel);
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(alergiasLabel);
@@ -223,7 +222,7 @@
         private System.Windows.Forms.CheckBox alergiasCheckBox;
         private System.Windows.Forms.Button aceptarButton;
         private System.Windows.Forms.Button cancelarButton;
-        private System.Windows.Forms.Label personaLabel;
         private System.Windows.Forms.ComboBox tiposAnalisisComboBox;
+        private System.Windows.Forms.ComboBox personaCombobox;
     }
 }

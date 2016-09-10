@@ -41,6 +41,11 @@ namespace Banco_de_Sangre
             this.porDniRadioButton = new System.Windows.Forms.RadioButton();
             this.porNombreYApellidoRadioButton = new System.Windows.Forms.RadioButton();
             this.personaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.agregarToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -50,6 +55,12 @@ namespace Banco_de_Sangre
             this.limpiarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.bancoTabPage = new System.Windows.Forms.TabPage();
             this.bancoDataGridView = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupoSanguineoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dador = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Receptor = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bancoTodasRadioButton = new System.Windows.Forms.RadioButton();
             this.porCompatibilidadReceptorRadioButton = new System.Windows.Forms.RadioButton();
@@ -63,6 +74,12 @@ namespace Banco_de_Sangre
             this.porGrupoSanguineoRadioButton = new System.Windows.Forms.RadioButton();
             this.extraccionTabPage = new System.Windows.Forms.TabPage();
             this.extraccionDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.extraccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -76,23 +93,7 @@ namespace Banco_de_Sangre
             this.modificarExtraccionTSButton = new System.Windows.Forms.ToolStripButton();
             this.eliminarExtraccionTSButton = new System.Windows.Forms.ToolStripButton();
             this.refrescarTStButton = new System.Windows.Forms.ToolStripButton();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grupoSanguineoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dador = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Receptor = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.extraccionTodasRadioButton = new System.Windows.Forms.RadioButton();
             this.tabControl.SuspendLayout();
             this.personaTabPage.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -155,6 +156,7 @@ namespace Banco_de_Sangre
             // todasRadioButton
             // 
             this.todasRadioButton.AutoSize = true;
+            this.todasRadioButton.Checked = true;
             this.todasRadioButton.Location = new System.Drawing.Point(13, 10);
             this.todasRadioButton.Name = "todasRadioButton";
             this.todasRadioButton.Size = new System.Drawing.Size(55, 17);
@@ -228,6 +230,46 @@ namespace Banco_de_Sangre
             this.personaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.personaDataGridView.Size = new System.Drawing.Size(698, 333);
             this.personaDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Dirección";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Dni";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Número documento";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Telefono";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // personaBindingSource
             // 
@@ -329,6 +371,50 @@ namespace Banco_de_Sangre
             this.bancoDataGridView.Size = new System.Drawing.Size(698, 337);
             this.bancoDataGridView.TabIndex = 1;
             // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellidoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // Dni
+            // 
+            this.Dni.DataPropertyName = "Dni";
+            this.Dni.HeaderText = "Dni";
+            this.Dni.Name = "Dni";
+            this.Dni.ReadOnly = true;
+            // 
+            // grupoSanguineoDataGridViewTextBoxColumn
+            // 
+            this.grupoSanguineoDataGridViewTextBoxColumn.DataPropertyName = "GrupoSanguineo";
+            this.grupoSanguineoDataGridViewTextBoxColumn.HeaderText = "Grupo sanguineo";
+            this.grupoSanguineoDataGridViewTextBoxColumn.Name = "grupoSanguineoDataGridViewTextBoxColumn";
+            this.grupoSanguineoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Dador
+            // 
+            this.Dador.DataPropertyName = "Dador";
+            this.Dador.HeaderText = "Dador";
+            this.Dador.Name = "Dador";
+            this.Dador.ReadOnly = true;
+            // 
+            // Receptor
+            // 
+            this.Receptor.DataPropertyName = "Receptor";
+            this.Receptor.HeaderText = "Receptor";
+            this.Receptor.Name = "Receptor";
+            this.Receptor.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
@@ -351,6 +437,7 @@ namespace Banco_de_Sangre
             // bancoTodasRadioButton
             // 
             this.bancoTodasRadioButton.AutoSize = true;
+            this.bancoTodasRadioButton.Checked = true;
             this.bancoTodasRadioButton.Location = new System.Drawing.Point(13, 36);
             this.bancoTodasRadioButton.Name = "bancoTodasRadioButton";
             this.bancoTodasRadioButton.Size = new System.Drawing.Size(55, 17);
@@ -494,6 +581,53 @@ namespace Banco_de_Sangre
             this.extraccionDataGridView.Size = new System.Drawing.Size(701, 337);
             this.extraccionDataGridView.TabIndex = 5;
             // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Fecha";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Persona";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Persona";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TipoAnalisis";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Tipo análisis";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 200;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Alergias";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Alergias";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DoctorSolicitante";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Doctor solicitante";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Notas";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Notas";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 150;
+            // 
             // extraccionBindingSource
             // 
             this.extraccionBindingSource.DataSource = typeof(Entidades.Extraccion);
@@ -501,6 +635,7 @@ namespace Banco_de_Sangre
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.extraccionTodasRadioButton);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.hastaDateTimePicker);
             this.panel3.Controls.Add(this.label1);
@@ -560,7 +695,7 @@ namespace Banco_de_Sangre
             // 
             // extraccionBuscarButton
             // 
-            this.extraccionBuscarButton.Location = new System.Drawing.Point(401, 7);
+            this.extraccionBuscarButton.Location = new System.Drawing.Point(476, 9);
             this.extraccionBuscarButton.Name = "extraccionBuscarButton";
             this.extraccionBuscarButton.Size = new System.Drawing.Size(75, 23);
             this.extraccionBuscarButton.TabIndex = 3;
@@ -619,136 +754,17 @@ namespace Banco_de_Sangre
             this.refrescarTStButton.Text = "Refrescar";
             this.refrescarTStButton.Click += new System.EventHandler(this.refrescarTStButton_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // extraccionTodasRadioButton
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Dirección";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Dni";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Número documento";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Telefono";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // Dni
-            // 
-            this.Dni.DataPropertyName = "Dni";
-            this.Dni.HeaderText = "Dni";
-            this.Dni.Name = "Dni";
-            this.Dni.ReadOnly = true;
-            // 
-            // grupoSanguineoDataGridViewTextBoxColumn
-            // 
-            this.grupoSanguineoDataGridViewTextBoxColumn.DataPropertyName = "GrupoSanguineo";
-            this.grupoSanguineoDataGridViewTextBoxColumn.HeaderText = "Grupo sanguineo";
-            this.grupoSanguineoDataGridViewTextBoxColumn.Name = "grupoSanguineoDataGridViewTextBoxColumn";
-            this.grupoSanguineoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Dador
-            // 
-            this.Dador.DataPropertyName = "Dador";
-            this.Dador.HeaderText = "Dador";
-            this.Dador.Name = "Dador";
-            this.Dador.ReadOnly = true;
-            // 
-            // Receptor
-            // 
-            this.Receptor.DataPropertyName = "Receptor";
-            this.Receptor.HeaderText = "Receptor";
-            this.Receptor.Name = "Receptor";
-            this.Receptor.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Fecha";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Persona";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Persona";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "TipoAnalisis";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Tipo análisis";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 200;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Alergias";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Alergias";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "DoctorSolicitante";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Doctor solicitante";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Notas";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Notas";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 150;
+            this.extraccionTodasRadioButton.AutoSize = true;
+            this.extraccionTodasRadioButton.Checked = true;
+            this.extraccionTodasRadioButton.Location = new System.Drawing.Point(401, 12);
+            this.extraccionTodasRadioButton.Name = "extraccionTodasRadioButton";
+            this.extraccionTodasRadioButton.Size = new System.Drawing.Size(55, 17);
+            this.extraccionTodasRadioButton.TabIndex = 7;
+            this.extraccionTodasRadioButton.TabStop = true;
+            this.extraccionTodasRadioButton.Text = "Todas";
+            this.extraccionTodasRadioButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -849,5 +865,6 @@ namespace Banco_de_Sangre
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.RadioButton extraccionTodasRadioButton;
     }
 }

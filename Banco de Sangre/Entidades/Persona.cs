@@ -24,6 +24,13 @@ namespace Entidades
 
         public bool Receptor { get; set; }
 
+        public string NombreyApellido { get; set; }
+
+        public override string ToString()
+        {
+            return Apellido + " " + Nombre;
+        }
+
         [JsonIgnore]
         public GrupoSanguineo GrupoSanguineo { get; set; }
 
@@ -58,6 +65,9 @@ namespace Entidades
             if (GrupoSanguineo == null)
                 throw new ApplicationException(string.Format(msgRequired, "Grupo sanguineo"));
         }
+
+
+
     }
 }
 
