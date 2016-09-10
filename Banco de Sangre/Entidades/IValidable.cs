@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public interface IEntidad : IValidable
+    public interface IValidable
     {
-        Guid Id { get; set; }
+       void Validate();
     }
 }

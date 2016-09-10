@@ -81,5 +81,15 @@ namespace Reglas
             gsm.Grabar(gruposSanguineos);
         }     
 
+
+        public IEnumerable<GrupoSanguineo> ObtenerTodosLosGrupos()
+        {
+            var gsMapper = new GrupoSanguineoMapper();
+
+            var gruposSanguineos = gsMapper.ObtenerTodas();
+
+            return gruposSanguineos;
+        }
+
     }
 }

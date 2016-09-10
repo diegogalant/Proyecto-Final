@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtraccionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtraccionForm.Designer.cs">
+      <DependentUpon>ExtraccionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExtraccionForm.resx">
+      <DependentUpon>ExtraccionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +91,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Entidades.Extraccion.datasource" />
     <None Include="Properties\DataSources\Entidades.Persona.datasource" />
     <None Include="Properties\DataSources\Persona.datasource" />
     <None Include="Properties\Settings.settings">

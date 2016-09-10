@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public abstract class EntidadBase : IEntidad
+    public abstract class EntidadBase : IValidable, IEntidad
     {
         public Guid Id { get; set; }
 
@@ -15,6 +15,9 @@ namespace Entidades
         {
             Id = Guid.NewGuid();
         }
-    }
 
+        public virtual void Validate()
+        {                    
+        }
+    }
 }

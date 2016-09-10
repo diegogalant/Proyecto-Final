@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\..\Documents\json.net\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\json.net\json.net\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="BaseMapper.cs" />
     <Compile Include="EntityPersistor.cs" />
+    <Compile Include="ExtraccionMapper.cs" />
+    <Compile Include="ExtraccionRule.cs" />
     <Compile Include="GrupoSanguineoMapper.cs" />
     <Compile Include="GrupoSanguineoRule.cs" />
     <Compile Include="PersonaMapper.cs" />

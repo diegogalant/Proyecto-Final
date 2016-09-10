@@ -12,38 +12,33 @@ namespace Reglas
     {
         public void AgregarPersona(Persona persona)
         {
-            // Obtengo la lista
-            var personas = ObtenerPersonas();
-
-            foreach (var item in personas)
-            {
-                if (item.Id == persona.Id)
-                {
-                    throw new ApplicationException("No se puede agregar la persona porque ya existe");
-                }
-            }
-
-            // Le agrego el cliente
-           // personas;
-
-            //Grabamos
             var pMapper = new PersonaMapper();
 
-            //pMapper.Grabar(personas);
-
-
+            pMapper.Grabar(persona);
         }
 
         public void ModificarPersona(Persona persona)
         {
+            var pMapper = new PersonaMapper();
 
+            pMapper.Modificar(persona);
         }
 
         public void EliminarPersona(Persona persona)
         {
+            var pMapper = new PersonaMapper();
+
+            pMapper.Eliminar(persona);
         }
 
-        public IEnumerable<Persona> ObtenerPersonas()
+        public void EliminarTodasLasPersonas()
+        {
+            var pMapper = new PersonaMapper();
+
+            pMapper.EliminarTodas();
+        }
+
+        public IEnumerable<Persona> ObtenerTodasLasPersonas()
         {
             var pMapper = new PersonaMapper();
 
@@ -51,13 +46,5 @@ namespace Reglas
 
             return todasPersonas;
         }
-
-        public void GrabarPersona(List<Persona> personas)
-        {
-            var persistor = new EntityPersistor<Persona>();
-
-            persistor.Grabar(personas);
-        }
-
     }
 }

@@ -37,6 +37,11 @@ namespace Reglas
                 }
             }
 
+            foreach(var entidad in itemsAGrabar)
+            {
+                entidad.Validate();
+            }
+
             var persistor = new EntityPersistor<T>();
             persistor.Grabar(itemsAGrabar);
         }
@@ -80,5 +85,32 @@ namespace Reglas
             var persistor = new EntityPersistor<T>();
             persistor.Grabar(itemsAGrabar);
         }
+
+
+        public virtual void Modificar(T entidad)
+        {
+            var itemsAGrabar = new List<T>();       
+            var itemsExistentes = ObtenerTodas().ToList();
+
+            foreach (var item in itemsExistentes)
+            {
+                if (!item.Id.Equals(entidad.Id))
+                {
+                    itemsAGrabar.Add(item);
+                }
+                else
+                {
+                    var itemAModificar = entidad;
+ 
+                    Eliminar(item);
+
+                    itemsAGrabar.Add(itemAModificar);
+                }
+            }
+
+            var persistor = new EntityPersistor<T>();
+            persistor.Grabar(itemsAGrabar);
+        }
+
     }
 }

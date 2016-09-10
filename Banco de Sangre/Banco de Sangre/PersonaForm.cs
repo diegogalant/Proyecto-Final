@@ -19,23 +19,43 @@ namespace Banco_de_Sangre
             InitializeComponent();
         }
 
+        public string Action { get; set; }
+        public Persona Persona { get; set; }
 
         private void PersonaForm_Load(object sender, EventArgs e)
         {
-            personaBindingSource.DataSource = new Persona();
+            apellidoTextBox.Focus();
+
             var gsm = new GrupoSanguineoMapper();
             grupoSanguineoComboBox.DataSource = gsm.ObtenerTodas();
 
+            if (Action== "Agregar")
+            {
+                personaBindingSource.DataSource = new Persona();
+            }
+            else if(Action == "Modificar")
+            {
+                personaBindingSource.DataSource = Persona;
+                grupoSanguineoComboBox.SelectedItem = Persona.GrupoSanguineo;
+            }
         }
 
         private void aceptarButton_Click(object sender, EventArgs e)
         {
             var personaEnEdicion = (Persona)personaBindingSource.Current;
 
-            var r = new PersonaMapper();
-            r.Grabar(personaEnEdicion);
+            var pRule = new PersonaRule();
 
-             Close();
+            if (Action == "Agregar")
+            {
+                pRule.AgregarPersona(personaEnEdicion);
+            }
+            else if (Action == "Modificar")
+            {
+                pRule.ModificarPersona(personaEnEdicion);
+            }
+
+            Close();
         }
 
         private void cancelarButton_Click(object sender, EventArgs e)
